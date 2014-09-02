@@ -11,6 +11,10 @@
 </head>
 
 <body>
+<!-- ________________________________________________________ -->
+<div id="about" class="panel">
+</div>
+<!-- ________________________________________________________ -->
 <div class="lp">
   <div class="open">
     <div class="open-title">
@@ -23,7 +27,7 @@
   </div>
   <div class="clear"></div>
 </div>
-
+<!-- ________________________________________________________ -->
 <div id="wrap-image" class="wrap-image">
   <img src="img/contact2.png" slt="logo">
 </div>
@@ -37,12 +41,13 @@
     <div class="tab">CONTACT</div>
   </div>
 </div>
-
 <div class="page-title">
   <div class="page-title-content">
     TOP
   </div>
 </div>
+<!-- ________________________________________________________ -->
+
 
 <script>
 $(function(){
@@ -50,6 +55,9 @@ $(function(){
     $('.open-title').css({"opacity":"0"});
     $('.left-lp').addClass("open-l");
     $('.right-lp').addClass("open-r");
+    $(window).on("transitionend",function(){
+      $('.lp').css({"display":"none"});
+    });
   });
 
   $('html').keyup(function(e){

@@ -1,6 +1,9 @@
 .clear{
   clear:both;
 }
+.none{
+  display:none;
+}
 .lp{
   position: absolute;
   z-index: 100;
@@ -37,10 +40,10 @@
   background-image: url(../img/wall-l.jpg);
   background-position: right;
   background-size: cover;
-  -webkit-transition: -webkit-transform 0.6s ease-out;
-  -moz-transition: -moz-transform 0.6s ease-out;
-  -o-transition: -o-transform 0.6s ease-out;
-  transition: transform 0.6s ease-out;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  -o-transition: -o-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
 }
 
 .right-lp{
@@ -52,15 +55,21 @@
   background-image: url(../img/wall-r.jpg);
   background-position: left;
   background-size: cover;
-  -webkit-transition: -webkit-transform 0.6s ease-out;
-  -moz-transition: -moz-transform 0.6s ease-out;
-  -o-transition: -o-transform 0.6s ease-out;
-  transition: transform 0.6s ease-out;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+  -o-transition: -o-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
 }
 
 .open-l{
   transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
 }
 .open-r{
   transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
 }
