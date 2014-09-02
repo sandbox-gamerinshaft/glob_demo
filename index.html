@@ -12,6 +12,11 @@
 
 <body>
 <div class="lp">
+  <div class="open">
+    <div class="open-title">
+      OPEN
+    </div>
+  </div>
   <div class="left-lp">
   </div>
   <div class="right-lp">
@@ -41,6 +46,12 @@
 
 <script>
 $(function(){
+  $('.open-title').click(function(){
+    $('.open-title').css({"opacity":"0"});
+    $('.left-lp').addClass("open-l");
+    $('.right-lp').addClass("open-r");
+  });
+
   $('html').keyup(function(e){
     if(true){
       switch(e.which){
@@ -52,6 +63,8 @@ $(function(){
         break;
         case 38: // Key[↑]
         console.log("ue")
+        $('.left-lp').addClass("open-l")
+        $('.right-lp').addClass("open-r")
         break;
         case 40: // Key[↓]
         console.log("sita")
