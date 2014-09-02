@@ -17,7 +17,12 @@
   background-image: url(../img/wall-l.jpg);
   background-position: right;
   background-size: cover;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
+
 .right-lp{
   position: relative;
   float: right;
@@ -27,4 +32,15 @@
   background-image: url(../img/wall-r.jpg);
   background-position: left;
   background-size: cover;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.open-l{
+  transform: translateX(-100%);
+}
+.open-r{
+  transform: translateX(100%);
 }
