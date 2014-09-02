@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchwipe.js"></script>
+</head>
+
+<body>
+
+<script>
+$(function(){
+  $('html').keyup(function(e){
+    if(true){
+      switch(e.which){
+        case 39: // Key[→]
+        console.log("migi")
+        break;
+        case 37: // Key[←]
+        console.log("hidari")
+        break;
+        case 38: // Key[↑]
+        console.log("ue")
+        break;
+        case 40: // Key[↓]
+        console.log("sita")
+        break;
+      }
+    }
+  });
+
+  $("body").touchwipe({
+    wipeLeft: function() {
+      console.log("migi")
+    },
+    wipeRight: function() {
+        console.log("hidari")
+    },
+    wipeUp: function() {
+        console.log("ue")
+    },
+    wipeDown: function() {
+        console.log("sita")
+    },
+    min_move_x: 20,
+    min_move_y: 20,
+    preventDefaultEvents: false
+  });
+});
+</script>
+</body>
+</html>
