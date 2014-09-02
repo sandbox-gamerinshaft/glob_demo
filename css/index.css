@@ -7,4 +7,44 @@ body,html{
   width: 100%;
   height: auto;
 }
+.main-tabs{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  font-size: 20px;
+  color: rgb(134, 132, 132);
+  font-family: monospace;
+  font-weight: bold;
+}
+.main-tabs > .tab-content{
+  display: table;
+  margin: 0 auto;
+  width: 85%;
+  height:auto;
+  text-align: center;
+  cursor: pointer;
+}
+.tab-content > .tab{
+  display: table-cell;
+  vertical-align: middle;
+  border-bottom: 3px solid white;
+  word-break: break-all;
+}
+.tab-content > .tab:hover{
+  border-bottom: 3px solid orange;
+}
+.page-title{
+  width: 100%;
+  height: auto;
+  background-color: white;
 
+}
+.page-title >.page-title-content{
+  text-align: center;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 8px;
+  color: orange;
+  font-size: 40px;
+  padding: 10px 0px;
+}
