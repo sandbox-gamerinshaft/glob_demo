@@ -12,7 +12,17 @@
 
 <body>
 <!-- ________________________________________________________ -->
-<div id="about" class="panel">
+<div id="tab1" class="panel active" >
+</div>
+<div id="tab2" class="panel" >
+</div>
+<div id="tab3" class="panel" >
+</div>
+<div id="tab4" class="panel" >
+</div>
+<div id="tab5" class="panel" >
+</div>
+<div id="tab6" class="panel" >
 </div>
 <!-- ________________________________________________________ -->
 <div class="lp">
@@ -28,22 +38,24 @@
   <div class="clear"></div>
 </div>
 <!-- ________________________________________________________ -->
-<div id="wrap-image" class="wrap-image">
-  <img src="img/contact2.png" slt="logo">
-</div>
-<div class="main-tabs">
-  <div class="tab-content">
-    <div class="tab">ABOUT　</div>
-    <div class="tab">WORKS　</div>
-    <div class="tab">MEMBER</div>
-    <div class="tab">BUSINESS</div>
-    <div class="tab">TWITTER</div>
-    <div class="tab">CONTACT</div>
+<div class="wrap">
+  <div id="wrap-image" class="wrap-image">
+    <img src="img/contact1.png" slt="logo">
   </div>
-</div>
-<div class="page-title">
-  <div class="page-title-content">
-    TOP
+  <div class="main-tabs">
+    <div class="tab-content">
+      <div class="tab" data-number="1"><div class="tabname">ABOUT　</div></div>
+      <div class="tab" data-number="2"><div class="tabname">WORKS　</div></div>
+      <div class="tab" data-number="3"><div class="tabname">MEMBER</div></div>
+      <div class="tab" data-number="4"><div class="tabname">BUSINESS</div></div>
+      <div class="tab" data-number="5"><div class="tabname">TWITTER</div></div>
+      <div class="tab" data-number="6"><div class="tabname">CONTACT</div></div>
+    </div>
+  </div>
+  <div class="page-title">
+    <div class="page-title-content">
+      TOP
+    </div>
   </div>
 </div>
 <!-- ________________________________________________________ -->
@@ -51,6 +63,49 @@
 
 <script>
 $(function(){
+  activenumber = 1;
+  isActive = true;
+  $('.tab').on("click",function(){
+    if(isActive == true){
+      isActive = false;
+      number = $(this).data("number");
+      if(activenumber==number){
+      }else if(activenumber<number){
+        $("#tab"+activenumber).animate({
+          left: '-100%'
+        }, 600, function() {
+          $(this).css({"left":"auto"});
+          $(this).removeClass("active");
+        });
+        $("#tab"+number).css({"right":"-100%"});
+        $("#tab"+number).addClass("active");
+        $("#tab"+number).animate({
+          right: '0'
+        }, 600, function() {
+          $(this).css({"left":"auto"});
+          isActive = true;
+        });
+      }else{
+        $("#tab"+activenumber).animate({
+          left: '100%'
+        }, 600, function() {
+          $(this).css({"left":"auto"});
+          $(this).removeClass("active");
+        });
+        $("#tab"+number).css({"right":"100%"});
+        $("#tab"+number).addClass("active");
+        $("#tab"+number).animate({
+          right: '0'
+        }, 600, function() {
+          $(this).css({"left":"auto"});
+          isActive = true;
+        });
+      }
+      activenumber = number;
+    }
+    console.log($(this).data("number"));
+  });
+
   $('.open-title').click(function(){
     $('.open-title').css({"opacity":"0"});
     $('.left-lp').addClass("open-l");

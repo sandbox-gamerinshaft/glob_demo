@@ -3,16 +3,49 @@ body,html{
   margin:0;
   background-color: orange;
 }
-#about.panel{
+#tab1.panel{
+  background-color: red;
+}
+#tab2.panel{
+  background-color: orange;
+}
+#tab3.panel{
+  background-color: yellow;
+}
+#tab4.panel{
+  background-color: blue;
+}
+#tab5.panel{
+  background-color: green;
+}
+#tab6.panel{
+  background-color: black;
+}
+.active{
+  display: block !important;
+}
+.panel{
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: red;
-
+  display:none;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -o-transition: -o-transform 1s ease-out;
+  transition: transform 1s ease-out;
 }
-.panel > .skelton{
-
+.setLeft{
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+.setRight{
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -o-transform: translateX(100%);
 }
 .page-title{
   position: relative;
@@ -36,6 +69,14 @@ body,html{
   }
 }
 /*---------------*/
+.wrap{
+  border-right: 70px solid white;
+  border-left: 70px solid white;
+  z-index: 5;
+  position: relative;
+  width: auto;
+}
+
 .wrap-image > img{
   position: relative;
   z-index: 2;
@@ -47,7 +88,6 @@ body,html{
   z-index: 2;
   width: 100%;
   height: auto;
-  background-color: white;
   font-size: 20px;
   color: rgb(134, 132, 132);
   font-family: monospace;
@@ -66,7 +106,7 @@ body,html{
 .main-tabs > .tab-content{
   display: table;
   margin: 0 auto;
-  width: 85%;
+  width: 100%;
   height:auto;
   text-align: center;
   cursor: pointer;
@@ -74,11 +114,15 @@ body,html{
 .tab-content > .tab{
   display: table-cell;
   vertical-align: middle;
-  border-bottom: 3px solid white;
   word-break: break-all;
 }
-.tab-content > .tab:hover{
-  border-bottom: 3px solid orange;
+.tab > .tabname{
+  background-color: white;
+  padding-bottom: 2px;
+}
+.tab:hover > .tabname{
+  padding-bottom: 0px;
+  margin-bottom: 2px;
 }
 /*---------------*/
 
