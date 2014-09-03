@@ -66,10 +66,11 @@ $(function(){
   activenumber = 1;
   isActive = true;
   $('.tab').on("click",function(){
-    if(isActive == true){
+    if(isActive){
       isActive = false;
       number = $(this).data("number");
       if(activenumber==number){
+        isActive = true;
       }else if(activenumber<number){
         $("#tab"+activenumber).animate({
           left: '-100%'
